@@ -335,6 +335,49 @@
       font-weight: 700;
     }
 
+    .venue-guide {
+      margin-top: 22px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #fff;
+    }
+    .venue-guide table {
+      width: 100%;
+      min-width: 680px;
+      border-collapse: collapse;
+    }
+    .venue-guide caption {
+      padding: 18px 20px 12px;
+      text-align: left;
+      font-weight: 900;
+      font-size: 1.05rem;
+    }
+    .venue-guide th,
+    .venue-guide td {
+      padding: 12px 16px;
+      border-top: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    .venue-guide th {
+      color: var(--main-dark);
+      background: var(--soft-blue);
+      font-size: 0.86rem;
+    }
+    .venue-guide td {
+      font-size: 0.9rem;
+    }
+    .venue-guide td:first-child {
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .venue-note {
+      margin: 12px 2px 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
     .transform {
       display: grid;
       grid-template-columns: 1fr 56px 1fr 56px 1fr;
@@ -553,6 +596,7 @@
           <p>発表中は簡潔に，参考文献欄では辿れるように詳しく書く。</p>
         </div>
       </div>
+
     </section>
 
     <section id="fields">
@@ -621,6 +665,34 @@
           </div>
         </div>
       </div>
+
+      <div class="venue-guide">
+        <table>
+          <caption>代表的な国際会議で記載する掲載情報</caption>
+          <thead>
+            <tr>
+              <th>会議</th>
+              <th>Vol.</th>
+              <th>No.</th>
+              <th>pp.</th>
+              <th>メモ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>ICML</td><td>あり</td><td>なし</td><td>あり</td><td>PMLRの巻番号とページを記載</td></tr>
+            <tr><td>NeurIPS</td><td>あり</td><td>なし</td><td>あり</td><td>Proceedingsの巻番号とページを記載</td></tr>
+            <tr><td>CVPR / ICCV / WACV</td><td>なし</td><td>なし</td><td>あり</td><td>ページのみ記載</td></tr>
+            <tr><td>ECCV</td><td>あり</td><td>なし</td><td>あり</td><td>LNCSの巻番号とページを記載</td></tr>
+            <tr><td>ICLR</td><td>なし</td><td>なし</td><td>なし</td><td>会議名と年まででよい</td></tr>
+            <tr><td>IJCAI</td><td>なし</td><td>なし</td><td>あり</td><td>ページのみ記載</td></tr>
+            <tr><td>AAAI</td><td>あり</td><td>あり</td><td>あり</td><td>巻・号・ページを記載</td></tr>
+            <tr><td>KDD</td><td>なし</td><td>なし</td><td>あり</td><td>ページを記載</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="venue-note">
+        同じ会議でも開催年や取得元によってフィールドが異なる場合があります。空欄を推測で補わず，公式Proceedingsまたは公式BibTeXに掲載されている情報を使います。
+      </p>
     </section>
 
     <section id="slides">
