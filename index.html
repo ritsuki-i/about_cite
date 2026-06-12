@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>後輩のためのBibTeX・引用ガイド</title>
+  <title>BibTeX・引用ガイド</title>
   <style>
     :root {
       --bg: #f6f7fb;
@@ -332,9 +332,9 @@
   <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
   <header>
-    <h1>後輩のためのBibTeX・引用ガイド</h1>
+    <h1>BibTeX・引用ガイド</h1>
     <p>文献情報を正しく集め，正しく書き，正しく引用するための実用まとめ</p>
-    <div class="updated">最終更新日：2026年5月21日</div>
+    <div class="updated">最終更新日：2026年6月12日</div>
   </header>
 
   <div class="layout">
@@ -554,34 +554,65 @@
           重要なのは，読者が元の文献にたどり着けることです。
         </p>
 
-        <h3>本文中の引用</h3>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>書き方</th>
-                <th>例</th>
-                <th>使う場面</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>著者を主語にする</td>
-                <td>Radfordらは，画像と言語を対応付けるCLIPを提案した。</td>
-                <td>その研究の主張や貢献を説明したいとき</td>
-              </tr>
-              <tr>
-                <td>文末で引用する</td>
-                <td>画像と言語の対応付けにはCLIPが広く用いられている。</td>
-                <td>背景説明に根拠を付けたいとき</td>
-              </tr>
-              <tr>
-                <td>複数文献をまとめる</td>
-                <td>近年，視覚言語モデルを用いた研究が進んでいる。</td>
-                <td>関連研究の流れを示したいとき</td>
-              </tr>
-            </tbody>
-          </table>
+        <h3>スライド内引用での記載方法</h3>
+        <p>
+          発表内容を読みやすくするため，著者名と会議名を省略して簡潔に記載します。
+          著者が3名以上の場合は，先頭著者のみを記載し，残りの著者を <code>et al.</code> で省略します。
+          会議名には <code>NeurIPS</code> のような略称を使用します。
+        </p>
+
+        <h4>定式化</h4>
+        <pre><code>[先頭著者の姓, ’発表年の下2桁] 省略した著者表記: 論文タイトル, In 会議略称, Vol. 巻, No. 号, pp. 開始ページ--終了ページ (発表年).</code></pre>
+
+        <h4>例</h4>
+        <pre><code>[Mucsányi, ’24] Mucsányi, B., et al.: Benchmarking Uncertainty Disentanglement: Specialized Uncertainties for Specialized Tasks, In NeurIPS, Vol. 37, pp. 50972--51038 (2024).</code></pre>
+
+        <div class="grid">
+          <div class="mini-card">
+            <strong>著者名</strong>
+            3名以上の場合は，先頭著者以外を <code>et al.</code> で省略する。
+          </div>
+          <div class="mini-card">
+            <strong>会議名</strong>
+            正式名称ではなく，<code>NeurIPS</code> などの略称を記載する。
+          </div>
+          <div class="mini-card">
+            <strong>目的</strong>
+            スライド内で場所を取りすぎない，簡潔な引用情報にする。
+          </div>
+        </div>
+
+        <h3>参考文献スライドでの記載方法</h3>
+        <p>
+          発表の最後などに置く参考文献スライドでは，著者名を省略せず，全著者を記載します。
+          会議名も省略せず，正式名称の後ろに略称を括弧付きで記載します。
+        </p>
+
+        <h4>定式化</h4>
+        <pre><code>[先頭著者の姓, ’発表年の下2桁] 全著者名: 論文タイトル, In Proceedings of the 正式な会議名 (会議略称), Vol. 巻, No. 号, pp. 開始ページ--終了ページ (発表年).</code></pre>
+
+        <h4>例</h4>
+        <pre><code>[Mucsányi, ’24] Mucsányi, B., Kirchhof, M. and Oh, S. J.: Benchmarking Uncertainty Disentanglement: Specialized Uncertainties for Specialized Tasks, In Proceedings of the Advances in Neural Information Processing Systems (NeurIPS), Vol. 37, pp. 50972--51038 (2024).</code></pre>
+
+        <div class="grid">
+          <div class="mini-card">
+            <strong>著者名</strong>
+            省略せず，全著者を記載する。
+          </div>
+          <div class="mini-card">
+            <strong>会議名</strong>
+            正式名称を記載し，直後に略称を括弧付きで記載する。
+          </div>
+          <div class="mini-card">
+            <strong>表記例</strong>
+            <code>正式な会議名 (略称)</code>
+          </div>
+        </div>
+
+        <div class="good">
+          <strong>両方に共通するルール：</strong>
+          <code>volume</code>，<code>number</code>，<code>pages</code> の情報が存在する場合は，省略せずに記載します。
+          それぞれ <code>Vol.</code>，<code>No.</code>，<code>pp.</code> の形式で表記します。
         </div>
 
         <h3>参考文献欄に必要な情報</h3>
@@ -596,23 +627,23 @@
             <tbody>
               <tr>
                 <td>会議論文</td>
-                <td>著者，タイトル，会議名，ページ，年，DOI</td>
+                <td>著者，タイトル，会議名，巻，号，ページ，年</td>
               </tr>
               <tr>
                 <td>雑誌論文</td>
-                <td>著者，タイトル，雑誌名，巻，号，ページ，年，DOI</td>
+                <td>著者，タイトル，雑誌名，巻，号，ページ，年</td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <td>書籍</td>
                 <td>著者，書名，出版社，年</td>
               </tr>
               <tr>
                 <td>Webページ</td>
                 <td>著者または組織名，タイトル，URL，閲覧日</td>
-              </tr>
+              </tr> -->
               <tr>
                 <td>arXiv</td>
-                <td>著者，タイトル，arXiv番号，年。ただし採択版があればそちらを優先</td>
+                <td>著者，タイトル，arXiv番号，年</td>
               </tr>
             </tbody>
           </table>
@@ -680,13 +711,15 @@
   year    = {2026}
 }</code></pre>
 
-        <h3>Webページ</h3>
-        <pre><code>@misc{example2026web,
-  author       = {{Example Organization}},
-  title        = {Example Web Page Title},
-  howpublished = {\url{https://example.com}},
-  year         = {2026},
-  note         = {Accessed: 2026-05-21}
+        <h3>アーカイブ論文</h3>
+        <pre><code>@misc{radford2021learningtransferablevisualmodels,
+      title={Learning Transferable Visual Models From Natural Language Supervision}, 
+      author={Alec Radford and Jong Wook Kim and Chris Hallacy and Aditya Ramesh and Gabriel Goh and Sandhini Agarwal and Girish Sastry and Amanda Askell and Pamela Mishkin and Jack Clark and Gretchen Krueger and Ilya Sutskever},
+      year={2021},
+      eprint={2103.00020},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2103.00020}, 
 }</code></pre>
       </section>
 
@@ -695,7 +728,7 @@
         <div class="good">
           BibTeXは，文献情報を自動で扱うための便利な形式です。
           しかし，取得したBibTeXが常に正しいとは限りません。
-          公式ページを優先し，著者名，タイトル，会議名，年，ページ，DOIを確認してから使うことが重要です。
+          公式ページを優先し，著者名，タイトル，会議名，年，ページを確認してから使うことが重要です。
         </div>
       </section>
     </main>
